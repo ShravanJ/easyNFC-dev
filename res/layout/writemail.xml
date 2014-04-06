@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/emailaddresseditText1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="@string/email_address" />
+
+    <EditText
+        android:id="@+id/subjecteditText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailSubject"
+        android:text="@string/subject" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="358dp"
+        android:ems="10"
+        android:inputType="textLongMessage"
+        android:text="@string/body" />
+
+    <Button
+        android:id="@+id/writeemailbutton1"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:text="@string/write_to_tag" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tag_written" />
+
+</LinearLayout>

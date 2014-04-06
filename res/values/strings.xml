@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">EasyNFC</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="phone">Phone</string>
+    <string name="phone_number">phone number</string>
+    <string name="write_to_tag">write to tag</string>
+    <string name="url">URL</string>
+    <string name="map">Map</string>
+    <string name="latitude">latitude</string>
+    <string name="longitude">longitude</string>
+    <string name="sms">sms</string>
+    <string name="mail">mail</string>
+    <string name="email_address">email address</string>
+    <string name="subject">Subject</string>
+    <string name="body">Body</string>
+    <string name="tag_written">Tag written</string>
+
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/urltext"
+        android:layout_width="289dp"
+        android:layout_height="50dp"
+        android:inputType="textUri"
+        
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/URL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/url" />
+
+    <Button
+        android:id="@+id/writeurlbutton"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:text="@string/write_to_tag" />
+
+</LinearLayout>

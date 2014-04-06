@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RadioButton android:id="@+id/phone"
+        android:layout_width="400dp"
+        android:layout_height="75dp"
+        android:text="@string/phone"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:onClick="onRadioButtonClicked"/>
+        
+    <RadioButton android:id="@+id/url1"
+        android:layout_width="400dp"
+        android:layout_height="75dp"
+        android:text="@string/url"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:onClick="onRadioButtonClicked"/>
+    
+    
+    <RadioButton android:id="@+id/mapmain"
+        android:layout_width="400dp"
+        android:layout_height="75dp"
+        android:text="@string/map"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:onClick="onRadioButtonClicked"/>
+    
+    <RadioButton android:id="@+id/sms"
+        android:layout_width="400dp"
+        android:layout_height="75dp"
+        android:text="@string/sms"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:onClick="onRadioButtonClicked"/>
+    
+    <RadioButton android:id="@+id/mailmain"
+        android:layout_width="400dp"
+        android:layout_height="75dp"
+        android:text="@string/mail"
+        android:layout_gravity="center"
+        android:onClick="onRadioButtonClicked"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="560dp"
+        android:layout_height="112dp"
+        android:text="To write a task to a NFC tag, select the type of task to be written and follow the instructions to write to the tag."
+        android:textSize="25sp" />
+    
+</RadioGroup>
