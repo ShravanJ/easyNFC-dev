@@ -43,12 +43,28 @@
         android:layout_gravity="center"
         android:onClick="onRadioButtonClicked"
         android:textSize="30sp"/>
+    
+    <RadioButton
+        android:id="@+id/app"
+        android:layout_width="400dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center"
+        android:onClick="onRadioButtonClicked"
+        android:text="app"
+        android:textSize="30sp"/>
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="560dp"
-        android:layout_height="112dp"
+        android:layout_height="100dp"
         android:text="To write a task to a NFC tag, select the type of task to be written and follow the instructions to write to the tag."
         android:textSize="25sp" />
+    
+    <TextView 
+        android:id="@+id/textView"
+        android:layout_width="450dp"
+        android:layout_height="90dp"
+        android:text="Create great apps using the core of EasyNFC. Check it out at github.com/shravanj/easynfc-dev/"
+        android:textSize="20sp" />
     
 </RadioGroup>

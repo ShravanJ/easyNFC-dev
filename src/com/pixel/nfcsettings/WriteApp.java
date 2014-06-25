@@ -1,4 +1,6 @@
-//Copyright 2013-2014 Shravan Jambukesan and Akash Kakkilaya
+//Copyright 2014 Shravan Jambukesan.Contains re-used code by Akash Kakkilaya.
+//This feature has not yet been tested on a device yet
+//Code re-used from WriteUrlActivity.java modified to handle opening of app bundle IDs
 package com.pixel.nfcsettings;
 
 import java.io.IOException;
@@ -21,7 +23,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class WriteUrlActivity extends Activity {
+public class WriteApp extends Activity {
 
 	private NfcAdapter mNfcAdapter;
 	private PendingIntent mPendingIntent;
@@ -41,7 +43,7 @@ public class WriteUrlActivity extends Activity {
         	public void onClick(View view) {
         		urlAddress = urlEditText.getText().toString();
          		TextView messageText = (TextView)findViewById(R.id.URL);
-         		messageText.setText("Touch NFC Tag to write http://www."+urlAddress);
+         		messageText.setText("Touch NFC Tag to write app to open " +urlAddress);
         		        		
         	}
         });
@@ -74,7 +76,7 @@ public class WriteUrlActivity extends Activity {
         
         byte[] uriField = urlAddress.getBytes(Charset.forName("US-ASCII"));
         byte[] payload = new byte[uriField.length + 1];              //add 1 for the URI Prefix
-        payload[0] = 0x01;                               
+        payload[0] = 0x0;                                      
         System.arraycopy(uriField, 0, payload, 1, uriField.length);  //appends URI to payload
         NdefRecord URIRecord  = new NdefRecord(
             NdefRecord.TNF_WELL_KNOWN, NdefRecord.RTD_URI, new byte[0], payload);
@@ -136,5 +138,7 @@ public class WriteUrlActivity extends Activity {
 }
     
     
+
+
 
 

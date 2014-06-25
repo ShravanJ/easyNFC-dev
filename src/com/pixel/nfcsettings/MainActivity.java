@@ -62,13 +62,22 @@ public class MainActivity extends Activity {
                 Intent myIntent = new Intent(view.getContext(), WriteMailActivity.class);
                 startActivityForResult(myIntent, 0);
             }
-        });        
+        });
+        
+        Button writeAppButton = (Button) findViewById(R.id.app);
+        writeAppButton.setOnClickListener(new View.OnClickListener()
+        {
+        	public void onClick (View view) {
+        		Intent myIntent = new Intent(view.getContext(), WriteApp.class );
+        		startActivityForResult(myIntent, 0);
+        	}
+        });
         
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
+		// Currently unused. Use this block to add options to the menu.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 		
