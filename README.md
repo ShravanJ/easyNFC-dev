@@ -3,7 +3,7 @@ easyNFC-dev
 
 A simple application with frameworks to perform NFC related tasks on an Android device.
 
-Rudimentary documentation here: http://shravanj.github.io/doc.txt
+Nice documentation here: https://shravanj.github.io/Documentation.txt
 
 Finally open-sourced!
 
