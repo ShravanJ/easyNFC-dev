@@ -1,6 +1,13 @@
 //Copyright 2014 Shravan Jambukesan.Contains re-used code by Akash Kakkilaya.
 //This feature has not yet been tested on a device yet
 //Code re-used from WriteUrlActivity.java modified to handle opening of app bundle IDs
+
+
+/*someone pls test this out and tell me if it works so i can either keep it or throw it out. its literally a crap
+re-implementation of the url writter that i put together in like 10 minutes. or help me fix it as i dont have much 
+time for this project anymore. thanks ~shravanj
+*/
+
 package com.pixel.nfcsettings;
 
 import java.io.IOException;
