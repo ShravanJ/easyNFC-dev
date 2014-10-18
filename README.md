@@ -12,3 +12,7 @@ This project is licensed under the MIT License
 
 Copyright 2013-2014 Shravan Jambukesan and Akash Kakkilaya
 
+TODO
+============
+-Make comments inline with code
+-Utilize javadoc
