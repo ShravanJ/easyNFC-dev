@@ -1,4 +1,4 @@
-//Copyright 2014 Shravan Jambukesan.Contains re-used code by Akash Kakkilaya.
+//Copyright 2014-2015 Shravan Jambukesan. Contains re-used code by Akash Kakkilaya.
 //This feature has not yet been tested on a device yet
 //Code re-used from WriteUrlActivity.java modified to handle opening of app bundle IDs
 
