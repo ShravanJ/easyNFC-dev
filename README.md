@@ -10,7 +10,7 @@ Finally open-sourced!
 
 This project is licensed under the MIT License
 
-Copyright 2013-2014 Shravan Jambukesan and Akash Kakkilaya
+Copyright 2013-2015 Shravan Jambukesan and Akash Kakkilaya
 
 TODO
 ============
