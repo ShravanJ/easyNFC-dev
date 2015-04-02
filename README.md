@@ -17,3 +17,7 @@ TODO
 -Make comments inline with code
 
 -Utilize javadoc
+
+***GOOD NEWS***
+
+Code clean up should be coming soon, along with inline comments and javadoc!
