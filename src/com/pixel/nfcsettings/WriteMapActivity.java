@@ -40,7 +40,8 @@ public class WriteMapActivity extends Activity {
         Button writeMapButton = (Button)this.findViewById(R.id.mapwritebutton);
         writeMapButton.setOnClickListener(new android.view.View.OnClickListener() 
         {
-        	public void onClick(View view) {
+        	public void onClick(View view) 
+        	{
         		String latitude = latitudeEditText.getText().toString();
         		String longitude = longitudeEditText.getText().toString();    		
          		urlAddress = "geo:"+latitude+","+longitude;
@@ -57,22 +58,22 @@ public class WriteMapActivity extends Activity {
     	 mPendingIntent = PendingIntent.getActivity(this, 0,
                 new Intent(this, getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0);
    	 	IntentFilter ndef = new IntentFilter(NfcAdapter.ACTION_NDEF_DISCOVERED);
-   	 	mFilters = new IntentFilter[] {
-             ndef,
-   	 	};
+   	 	mFilters = new IntentFilter[] {ndef,};
           mTechLists = new String[][] { new String[] { Ndef.class.getName() },
        		   new String[] { NdefFormatable.class.getName() }};
     }
     
     @Override
-    public void onResume() {
+    public void onResume() 
+    {
         super.onResume();
         if (mNfcAdapter != null) mNfcAdapter.enableForegroundDispatch(this, mPendingIntent, mFilters,
                 mTechLists);
     }
 
     @Override
-    public void onNewIntent(Intent intent) {
+    public void onNewIntent(Intent intent)
+    {
         Log.i("Foreground dispatch", "Discovered tag with intent: " + intent);
         Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);  
         String externalType = "nfclab.com:geoService";
@@ -83,12 +84,14 @@ public class WriteMapActivity extends Activity {
     }
 
     @Override
-    public void onPause() {
+    public void onPause()
+    {
         super.onPause();
         mNfcAdapter.disableForegroundDispatch(this);
     }
     
-    boolean writeNdefMessageToTag(NdefMessage message, Tag detectedTag) {
+    boolean writeNdefMessageToTag(NdefMessage message, Tag detectedTag) 
+    {
         int size = message.toByteArray().length;
         try {
             Ndef ndef = Ndef.get(detectedTag);
@@ -106,7 +109,7 @@ public class WriteMapActivity extends Activity {
 
                 ndef.writeNdefMessage(message);
                 ndef.close();                
-                Toast.makeText(this, "Message is written tag.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Message has been written to the tag.", Toast.LENGTH_SHORT).show();
                 return true;
             } else {
                 NdefFormatable ndefFormat = NdefFormatable.get(detectedTag);
@@ -115,7 +118,7 @@ public class WriteMapActivity extends Activity {
                     	ndefFormat.connect();
                     	ndefFormat.format(message);
                     	ndefFormat.close();
-                        Toast.makeText(this, "The data is written to the tag ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "The data has been written to the tag ", Toast.LENGTH_SHORT).show();
                         return true;
                     } catch (IOException e) {
                     	 Toast.makeText(this, "Failed to format tag", Toast.LENGTH_SHORT).show();

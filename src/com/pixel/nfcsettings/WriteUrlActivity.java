@@ -38,7 +38,8 @@ public class WriteUrlActivity extends Activity {
         Button writeUrlButton = (Button)this.findViewById(R.id.writeurlbutton);
         writeUrlButton.setOnClickListener(new View.OnClickListener() 
         {
-        	public void onClick(View view) {
+        	public void onClick(View view)
+        	{
         		urlAddress = urlEditText.getText().toString();
          		TextView messageText = (TextView)findViewById(R.id.URL);
          		messageText.setText("Touch NFC Tag to write http://www."+urlAddress);
@@ -52,23 +53,23 @@ public class WriteUrlActivity extends Activity {
                  new Intent(this, getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0);
     	 IntentFilter ndef = new IntentFilter(NfcAdapter.ACTION_NDEF_DISCOVERED);
     	 	//ndef.addDataScheme("http");
-	 	 mFilters = new IntentFilter[] {
-          ndef,
-	 	 };
+	 	 mFilters = new IntentFilter[] {ndef,};
          mTechLists = new String[][] { new String[] { Ndef.class.getName() },
     		   new String[] { NdefFormatable.class.getName() }};
 
      	
     }
     @Override
-    public void onResume() {
+    public void onResume() 
+    {
         super.onResume();
         if (mNfcAdapter != null) mNfcAdapter.enableForegroundDispatch(this, mPendingIntent, mFilters,
                 mTechLists);
     }
 
     @Override
-    public void onNewIntent(Intent intent) {
+    public void onNewIntent(Intent intent) 
+    {
         Log.i("Foreground dispatch", "Discovered tag with intent: " + intent);
         Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);  
         
@@ -83,7 +84,8 @@ public class WriteUrlActivity extends Activity {
     }
 
     @Override
-    public void onPause() {
+    public void onPause()
+    {
         super.onPause();
         mNfcAdapter.disableForegroundDispatch(this);
     }
@@ -106,7 +108,7 @@ public class WriteUrlActivity extends Activity {
 
                 ndef.writeNdefMessage(message);
                 ndef.close();                
-                Toast.makeText(this, "Message is written tag.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Message has been written to the tag.", Toast.LENGTH_SHORT).show();
                 return true;
             } else {
                 NdefFormatable ndefFormat = NdefFormatable.get(detectedTag);
@@ -115,7 +117,7 @@ public class WriteUrlActivity extends Activity {
                     	ndefFormat.connect();
                     	ndefFormat.format(message);
                     	ndefFormat.close();
-                        Toast.makeText(this, "The data is written to the tag ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "The data has been written to the tag ", Toast.LENGTH_SHORT).show();
                         return true;
                     } catch (IOException e) {
                     	 Toast.makeText(this, "Failed to format tag", Toast.LENGTH_SHORT).show();
